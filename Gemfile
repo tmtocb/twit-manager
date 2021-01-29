@@ -13,18 +13,21 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'factory_bot_rails'
   gem 'guard'
   gem 'guard-rspec', require: false
+  gem 'pry-rails'
   gem 'rspec-rails', '~> 4.0.2'
 end
 
 group :development do
-  gem 'web-console', '>= 3.3.0'
+  gem 'brakeman'
+  gem 'bullet'
+  gem 'bundler-audit'
   gem 'listen', '~> 3.2'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'web-console', '>= 3.3.0'
 end
 
 group :test do
