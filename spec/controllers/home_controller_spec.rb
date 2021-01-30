@@ -3,14 +3,17 @@ require 'rails_helper'
 describe HomeController do 
 
   describe 'GET index' do
-    subject { get :index }
+    let(:user) { create(:user) }
+    before do
+      sign_in(user)
+      get :index
+    end
+
     it 'renders the index template' do
-      subject
       expect(response).to render_template(:index)
     end
 
     it 'have success http status' do
-      subject
       expect(response).to have_http_status(:success)
     end
   end
