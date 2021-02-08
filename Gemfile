@@ -8,6 +8,7 @@ gem 'devise'
 gem 'devise-bootstrap-views', '~> 1.0'
 gem 'jbuilder', '~> 2.7'
 gem 'faker'
+gem "omniauth-rails_csrf_protection"
 gem 'omniauth-twitter'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 4.1'
